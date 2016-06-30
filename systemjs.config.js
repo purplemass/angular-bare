@@ -14,14 +14,14 @@
   var  map = {
     'app':                        'app',
 
-    '@angular':                   'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
-    '@angular/router':            'https://npmcdn.com/@angular/router' + routerVer,
-    '@angular/forms':             'https://npmcdn.com/@angular/forms' + formsVer,
-    '@angular/router-deprecated': 'https://npmcdn.com/@angular/router-deprecated' + routerDeprecatedVer,
-    'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
-    'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
-    'ts':                         'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
-    'typescript':                 'https://npmcdn.com/typescript@1.9.0-dev.20160409/lib/typescript.js',
+    '@angular':                   './node_modules/@angular', // sufficient if we didn't pin the version
+    '@angular/router':            './node_modules/@angular/router' + routerVer,
+    '@angular/forms':             './node_modules/@angular/forms' + formsVer,
+    '@angular/router-deprecated': './node_modules/@angular/router-deprecated' + routerDeprecatedVer,
+    'angular2-in-memory-web-api': './node_modules/angular2-in-memory-web-api', // get latest
+    'rxjs':                       './node_modules/rxjs',
+    'ts':                         './node_modules/plugin-typescript/lib/plugin.js',
+    'typescript':                 './node_modules/typescript/lib/typescript.js',
  };
 
   //packages tells the System loader how to load when no filename and/or no extension
@@ -41,10 +41,13 @@
     'upgrade',
   ];
 
+  // bob did as we get out local files without a version
+  ngVer = '';
+
   // Add map entries for each angular package
   // only because we're pinning the version with `ngVer`.
   ngPackageNames.forEach(function(pkgName) {
-    map['@angular/'+pkgName] = 'https://npmcdn.com/@angular/' + pkgName + ngVer;
+    map['@angular/'+pkgName] = './node_modules/@angular/' + pkgName + ngVer;
   });
 
   // Add package entries for angular packages
