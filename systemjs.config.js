@@ -20,7 +20,7 @@
     '@angular/router-deprecated': './node_modules/@angular/router-deprecated' + routerDeprecatedVer,
     'angular2-in-memory-web-api': './node_modules/angular2-in-memory-web-api', // get latest
     'rxjs':                       './node_modules/rxjs',
-    'ts':                         './node_modules/plugin-typescript/lib/plugin.js',
+    'ts':                         './node_modules/plugin-typescript/lib',
     'typescript':                 './node_modules/typescript/lib/typescript.js',
  };
 
@@ -29,6 +29,7 @@
     'app':                        { main: 'main.ts',  defaultExtension: 'ts' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+    'ts':                         { main: 'plugin.js', defaultExtension: 'js' },
   };
 
   var ngPackageNames = [
