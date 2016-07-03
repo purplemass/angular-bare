@@ -19,8 +19,8 @@ describe('AppComponent', () => {
     expect(this.app.title).toBe('Angular 2 Bare');
   });
 
-  // it('should say hello with name property', () => {
-  //   expect(this.app.sayHello()).toBe('Hello John');
-  // });
+  it('should say hello with title property', () => {
+    expect(this.app.sayHello()).toBe('Hello Angular 2 Bare');
+  });
 
 });

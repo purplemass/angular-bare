@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   template: '<h2>{{title}}</h2>'
 })
 export class AppComponent {
-  private title: string;
+  private title: string = 'Angular 2 Bare';
 
-  constructor() {
-    this.title = 'Angular 2 Bare';
+  sayHello(): string {
+    return `Hello ${this.title}`;
   }
 }
