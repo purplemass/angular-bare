@@ -22,3 +22,6 @@ npm-debug.log
 /src/*/dist/
 /dist/**
 .webpack.json
+
+# others #
+coverage/
